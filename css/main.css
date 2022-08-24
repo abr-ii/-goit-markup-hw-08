@@ -44,6 +44,8 @@ a {
 
 ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 input,
@@ -82,7 +84,7 @@ body {
 .nav-links,
 .team-list,
 .what-we-do-list,
-.studio-about,
+.studio-about__list,
 .button-filter-list,
 .projects-list,
 .clients-list {
@@ -95,26 +97,6 @@ body {
   padding: 0 15px;
 }
 
-.contacts-link,
-.nav-links-link,
-.contacts-link-footer,
-.modal-btn,
-.team-social-list-link,
-.clients-list__link,
-.footer-social-list-link,
-.button-filter-item,
-.projects-list-link,
-.modal-close-btn,
-.contact-form-input,
-.contact-form-input-svg,
-.contact-form-message,
-.contact-form-submit-btn,
-.subscription-form-submit-btn,
-.contact-form-checkbox,
-.contact-form-policy-linc {
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .logo {
   font-family: var(--secondary-font-title);
   font-weight: 700;
@@ -124,10 +106,10 @@ body {
   color: #2196F3;
   margin-right: 93px;
 }
-.logo_text-black {
+.logo__text-black {
   color: black;
 }
-.logo_text-white {
+.logo__text-white {
   color: white;
 }
 
@@ -144,6 +126,7 @@ body {
   border-radius: 4px;
   padding: 10px 32px;
   margin-top: 30px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-btn:hover, .modal-btn:focus {
   background: #188ce8;
@@ -151,7 +134,7 @@ body {
   border-radius: 4px;
 }
 
-.title {
+.section__title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.1666666667;
@@ -180,6 +163,9 @@ body {
   padding-left: 24px;
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.projects-list-link:hover .overlay, .projects-list-link:focus .overlay {
+  transform: translateY(0%);
 }
 
 .header-container {
@@ -212,6 +198,7 @@ body {
   line-height: 1.1428571429;
   letter-spacing: 0.02em;
   color: var(--primary-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-links-link:hover, .nav-links-link:focus,
 .contacts-link:hover,
@@ -278,7 +265,7 @@ body {
   background-size: cover;
 }
 
-.studio-about__list h3 {
+.studio-about__item h3 {
   font-weight: 700;
   line-height: 1.14;
   font-size: inherit;
@@ -296,13 +283,13 @@ body {
   background-color: rgb(245, 244, 250);
 }
 
-.studio-about__info-text {
+.studio-about__text {
   line-height: 1.71em;
   color: var(--secondary-color);
   width: 270px;
 }
 
-.studio-about__list:not(:last-child) {
+.studio-about__item:not(:last-child) {
   margin-right: 30px;
 }
 
@@ -393,6 +380,7 @@ body {
   background-color: var(--white-color);
   color: var(--grey-icons-AFB1B8);
   border-radius: 50%;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-social-list-link:hover, .team-social-list-link:focus {
   background-color: var(--focus-hover-color);
@@ -424,6 +412,7 @@ body {
   background-color: var(--white-color);
   border: 1px solid var(--grey-icons-AFB1B8);
   color: var(--grey-icons-AFB1B8);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-list__link:hover, .clients-list__link:focus {
   border: 1px solid var(--focus-hover-color);
@@ -502,10 +491,10 @@ body {
   background-color: rgba(255, 255, 255, 0.1);
   color: var(--white-color);
   border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-social-list-link:hover, .footer-social-list-link:focus {
   background-color: var(--focus-hover-color);
-  color: var(--white-color);
 }
 
 .footer-list-svg {
@@ -571,9 +560,10 @@ body {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   padding-right: 30px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .subscription-form-submit-btn:hover, .subscription-form-submit-btn:focus {
-  background: #188ce8;
+  background-color: #188ce8;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 }
@@ -609,6 +599,7 @@ body {
   border-radius: 4px;
   height: 38px;
   padding: 6px 22px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-filter-item:hover, .button-filter-item:focus {
   color: var(--white-color);
@@ -649,12 +640,10 @@ body {
   display: block;
   width: 100%;
   height: 100%;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .projects-list-link:hover, .projects-list-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-.projects-list-link:hover .overlay, .projects-list-link:focus .overlay {
-  transform: translateY(0%);
 }
 
 .description-projects {
@@ -714,6 +703,7 @@ body {
 }
 .modal-close-btn:hover {
   color: var(--focus-hover-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-icon {
@@ -863,9 +853,10 @@ body {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   padding: 10px 32px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-form-submit-btn:hover, .contact-form-submit-btn:focus {
-  background: #188ce8;
+  background-color: #188ce8;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 }/*# sourceMappingURL=main.css.map */

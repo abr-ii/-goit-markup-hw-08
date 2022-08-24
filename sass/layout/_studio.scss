@@ -1,4 +1,4 @@
-.studio-about__list h3 {
+.studio-about__item h3 {
     font-weight: 700;
     line-height: 1.14;
     font-size: inherit;
@@ -17,12 +17,12 @@
 }
 
 
-.studio-about__info-text {
+.studio-about__text {
     line-height: 1.71em;
     color: var(--secondary-color);
     width: 270px;
 }
 
-.studio-about__list:not(:last-child) {
+.studio-about__item:not(:last-child) {
     margin-right: 30px;
 }
