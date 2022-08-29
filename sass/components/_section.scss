@@ -1,0 +1,36 @@
+.section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @media screen and (min-width: 1200px) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+}
+
+.what-we-do-section {
+    @media screen and (max-width: 1199px) {
+        display: none;
+    }
+
+    @media screen and (min-width: 1200px) {
+        padding-top: 0;
+    }
+}
+
+.section_padding-top {
+    @media screen and (max-width: 1199px) {
+        display: none;
+    }
+
+    @media screen and (min-width: 1200px) {
+        padding-top: 0;
+    }
+}
+
+.section_bg-color {
+    background-color: #F5F4FA;
+}
+
+
+

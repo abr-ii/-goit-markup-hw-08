@@ -1,19 +1,37 @@
 .button-filter-list {
-    justify-content: center;
-    margin-bottom: 50px;
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 8px;
+    @media screen and(min-width:768px) {
+        justify-content: center;
+    }
+
+    &_margin-b {
+    @media screen and(max-width:767px) {
+        margin-bottom: 40px;
+    }
+
+    @media screen and(min-width:768px) {
+        margin-bottom: 30px;
+    }
+
+    @media screen and(min-width:1200px) {
+        margin-bottom: 50px;
+    }
+    }
 }
 
-.button-filter-point:not(:last-child) {
-    margin-right: 8px;
-}
+// .button-filter-point:not(:last-child) {
+//     margin-right: 8px;
+// }
 
-.button-filter-item {
+.filter-list__btn {
     font-family: inherit;
     font-style: inherit;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.63em;
-    align-items: center;
     text-align: center;
     border-radius: 4px;
     letter-spacing: inherit;
